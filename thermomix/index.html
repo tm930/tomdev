@@ -41,7 +41,7 @@
     <div class="sh"><h2>Co nabízím</h2></div>
     <div class="grid g2">
       <article class="card"><div class="row"><span class="ico"><svg class="i"><use href="#chef"/></svg></span><span class="num">01</span></div>
-        <h3>Nezávazné ukázkové vaření</h3><p>Nezávazná ukázka Thermomixu přímo v pohodlí vašeho domova nebo při příležitosti Dnu otevřených dveří) v kuchyni Vorwerk.</p></article>
+        <h3>Nezávazné ukázkové vaření</h3><p>Nezávazná ukázka Thermomixu přímo v pohodlí vašeho domova nebo při příležitosti Dne otevřených dveří v kuchyni Vorwerk.</p></article>
       <article class="card"><div class="row"><span class="ico"><svg class="i"><use href="#bag"/></svg></span><span class="num">02</span></div>
         <h3>Osobní konzultace &amp; Zprostředkování koupě</h3><p>Představení stroje, tipy na recepty, pomoc s výběrem balíčku, zprostředkování nákupu (včetně představení možností financování).</p></article>
       <article class="card"><div class="row"><span class="ico"><svg class="i"><use href="#plug"/></svg></span><span class="num">03</span></div>
@@ -65,10 +65,12 @@
   <section class="sec" id="rezervace">
     <div class="eye">Rezervace</div>
     <h2 class="h2" style="margin:10px 0 28px">Chci si domluvit ukázkové vaření</h2>
-    <form class="form glow f" id="f">
+    <form class="form glow f" id="f" action="https://formspree.io/f/mkjooqbw" method="POST">
+        <input type="hidden" name="_subject" value="Žádost o ukázkové vaření">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
       <div class="r3">
         <div><label for="n">Jméno</label><input type="text" id="n" name="Jméno" placeholder="Tvoje jméno" required></div>
-        <div><label for="e">E-mail</label><input type="email" id="e" name="E-mail" placeholder="tvuj mail@email.cz" required></div>
+        <div><label for="e">E-mail</label><input type="email" id="e" name="E-mail" placeholder="tvuj@email.cz" required></div>
         <div><label for="t">Telefonní číslo</label><input type="tel" id="t" name="Telefon" placeholder="+420 …"></div>
       </div>
       <div><label for="a">Co tě na Thermomixu zaujalo?</label><textarea id="a" name="Co mě zaujalo" rows="3"></textarea></div>
@@ -88,7 +90,7 @@
           <label><input type="checkbox" name="Domácnost je" value="Něco jiného"> Něco jiného – napiš do poznámky níže</label>
         </div></div>
       <div><label for="p">Napadá tě něco dalšího? Napiš mi sem svoji poznámku.</label><textarea id="p" name="Poznámka" rows="3"></textarea></div>
-      <div class="send"><button class="btn pri" type="submit">Odeslat žádost o vaření <svg class="i"><use href="#send"/></svg></button></div>
+      <div class="send"><button class="btn pri" type="submit">Odeslat žádost o vaření <svg class="i"><use href="#send"/></svg></button><small id="st" role="status"></small></div>
     </form>
   </section>
 
@@ -102,9 +104,15 @@
   </footer>
 </div>
 <script>
-document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();
-var b=[...new FormData(this)].filter(function(p){return p[1]}).map(function(p){return p[0]+': '+p[1]}).join('\n');
-location.href='mailto:hello@tomdev.cz?subject='+encodeURIComponent('Žádost o ukázkové vaření')+'&body='+encodeURIComponent(b)});
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var f=this,s=document.getElementById('st'),b=f.querySelector('button');
+  b.disabled=true;s.textContent='Odesílám…';
+  fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}})
+  .then(function(r){if(!r.ok)throw 0;f.reset();s.textContent='Díky, zpráva je odeslána. Ozvu se co nejdříve.'})
+  .catch(function(){s.textContent='Odeslání se nepovedlo. Napište mi prosím na info@tomdev.cz.'})
+  .finally(function(){b.disabled=false})
+});
 </script>
 </body>
 </html>
