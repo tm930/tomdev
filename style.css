@@ -8,7 +8,6 @@ ul{list-style:none}
 :focus-visible{outline:2px solid var(--g);outline-offset:2px}
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
 
-/* header / footer */
 .top{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}
 .logo{font:700 18px var(--h);letter-spacing:-.02em}
 .logo b{color:var(--g)}.logo span{color:var(--mut)}
@@ -19,7 +18,6 @@ ul{list-style:none}
 .foot a{display:inline-flex;align-items:center;gap:8px;letter-spacing:.1em;text-transform:uppercase;font-size:11px}
 .foot a:hover{color:var(--g)}
 
-/* buttons / labels */
 .btn{display:inline-flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid var(--line);font:600 11px var(--m);letter-spacing:.14em;text-transform:uppercase;color:var(--mut);background:transparent;cursor:pointer;transition:.2s}
 .btn:hover{color:var(--txt);border-color:var(--mut)}
 .btn.pri{color:var(--g);border-color:var(--g);background:var(--gd)}
@@ -29,7 +27,6 @@ ul{list-style:none}
 .ico{width:46px;height:46px;display:grid;place-items:center;font-size:20px;color:var(--g);background:var(--gd);border:1px solid rgba(0,255,65,.35);border-radius:4px}
 .num{font:11px var(--m);color:var(--mut);border:1px solid var(--line);padding:5px 10px;border-radius:3px}
 
-/* hero */
 .hero{padding:88px 0 72px}
 .hero h1{font:700 clamp(40px,6.6vw,84px)/1.02 var(--h);letter-spacing:-.035em;margin:20px 0 24px}
 .hero h1 em{font-style:normal;color:var(--g)}
@@ -37,14 +34,12 @@ ul{list-style:none}
 .hero p{max-width:560px;color:var(--mut);font-size:17px;margin-bottom:32px}
 .acts{display:flex;gap:12px;flex-wrap:wrap}
 
-/* index hero */
 .big{padding:72px 0 56px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
 .big h1{font:700 clamp(72px,14vw,170px)/.86 var(--h);letter-spacing:-.05em;margin-top:24px}
 .big h1 div{display:flex;align-items:baseline;gap:20px}
 .big h1 i{font:600 clamp(18px,2.4vw,28px) var(--m);font-style:normal;color:var(--g);letter-spacing:.06em}
 .big p{text-align:right;color:var(--mut);max-width:260px}
 
-/* sections / cards */
 .sec{padding-top:64px}
 .sh{display:flex;justify-content:space-between;align-items:flex-end;margin:10px 0 28px}
 .sh h2,.h2{font:700 clamp(26px,3.4vw,38px)/1.1 var(--h);letter-spacing:-.02em}
@@ -60,7 +55,6 @@ ul{list-style:none}
 .card.hl .eye{margin-bottom:12px}
 .card.hl .btn{align-self:flex-start;margin-top:auto}
 
-/* index cards */
 .path{padding:40px;min-height:460px}
 .path .row{margin-bottom:56px}
 .path h2{font:700 30px/1.15 var(--h);margin:12px 0 14px}
@@ -72,13 +66,11 @@ ul{list-style:none}
 .taste{background:radial-gradient(circle at 85% 30%,rgba(255,255,255,.05),transparent 55%),var(--surf)}
 .taste>p{color:var(--txt)}
 
-/* social */
 .soc .ico{margin-bottom:24px}
 .soc h3{margin-bottom:2px}
 .soc small{display:block;font:12px var(--m);color:var(--mut);margin-bottom:16px}
 .soc a{font:600 11px var(--m);letter-spacing:.14em;text-transform:uppercase;color:var(--g);display:inline-flex;gap:6px;align-items:center}
 
-/* forms */
 .cols{display:grid;grid-template-columns:1.6fr 1fr;gap:16px}
 .form{background:var(--surf);border:1px solid var(--line);border-radius:4px;padding:32px}
 .form.glow{border-color:var(--g);box-shadow:0 0 50px rgba(0,255,65,.1)}
