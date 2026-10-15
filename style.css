@@ -48,7 +48,7 @@ ul{list-style:none}
 .g3{grid-template-columns:repeat(3,1fr)}
 .card{position:relative;display:flex;flex-direction:column;background:var(--surf);border:1px solid var(--line);border-radius:4px;padding:28px;transition:border-color .2s}
 .card:hover{border-color:rgba(0,255,65,.45)}
-.card .row{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:44px}
+.card .row{display:flex;align-items:flex-start;margin-bottom:20px}
 .card h3{font:700 19px/1.25 var(--h);margin-bottom:10px}
 .card p{color:var(--mut);font-size:14px}
 .card.hl{border-color:var(--g);background:linear-gradient(160deg,rgba(0,255,65,.08),var(--surf));box-shadow:0 0 40px rgba(0,255,65,.08)}
