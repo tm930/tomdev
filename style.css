@@ -54,6 +54,9 @@ ul{list-style:none}
 .card.hl{border-color:var(--g);background:linear-gradient(160deg,rgba(0,255,65,.08),var(--surf));box-shadow:0 0 40px rgba(0,255,65,.08)}
 .card.hl .eye{margin-bottom:12px}
 .card.hl .btn{align-self:flex-start;margin-top:auto}
+.card-header {display: flex; align-items: center; gap: 16px; margin-bottom: 16px;}
+.card-header .ico,
+.card-header h3 {margin-bottom: 0;}
 
 .path{padding:40px;min-height:460px}
 .path .row{margin-bottom:56px}
