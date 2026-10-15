@@ -92,9 +92,15 @@
           <label><input type="checkbox" name="Domácnost je" value="Něco jiného"> Něco jiného – napiš do poznámky níže</label>
         </div></div>
       <div><label for="p">Napadá tě něco dalšího? Napiš mi sem svoji poznámku.</label><textarea id="p" name="Poznámka" rows="3"></textarea></div>
-      <div class="send"><button class="btn pri" type="submit">Odeslat žádost o vaření <svg class="i"><use href="#send"/></svg></button><small id="st" role="status"></small></div>
+      <div class="send" style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+        <button class="btn pri" type="submit">Odeslat žádost o vaření <svg class="i"><use href="#send"/></svg></button>
+        <span style="font-size:0.75rem; color:#888; max-width:320px; line-height:1.3;">
+          Odesláním formuláře potvrzujete, že jste se seznámili s <a href="/ochrana-osobnich-udaju/" style="color:#aaa; text-decoration:underline;">podmínkami ochrany osobních údajů</a>.
+        </span>
+        <small id="st" role="status"></small>
+      </div>
     </form>
-  </section>
+</section>
 
   <footer class="foot">
     <span>© 2026 tomdev — Thermomix s Tomem, nezávislý poradce pro Vorwerk</span>
