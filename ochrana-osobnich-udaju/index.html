@@ -1,81 +1,64 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="cs" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ochrana osobních údajů — tomdev</title>
+    <title>Ochrana osobních údajů – tomdev.cz</title>
     <link rel="stylesheet" href="/style.css">
-    <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png">
-    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
 </head>
-<body>
+<body class="bg-black text-gray-200 antialiased min-h-screen flex flex-col justify-between selection:bg-green-500 selection:text-black">
 
-    <header style="max-w: 1100px; margin: 0 auto; padding: 2rem 1.5rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1);">
-        <a href="/" style="font-weight: 700; font-size: 1.2rem; color: #fff; text-decoration: none;">tomdev.cz</a>
-        <a href="/" style="color: var(--muted, #a0a0a0); text-decoration: none; font-size: 0.9rem;">← Zpět na úvod</a>
+    <header class="w-full border-b border-white/10 py-4 px-6 md:px-12 flex justify-between items-center bg-black/50 backdrop-blur-md sticky top-0 z-50">
+        <a href="/" class="text-lg font-bold tracking-wider text-green-400 hover:text-green-300 transition">tomdev.cz</a>
+        <a href="/" class="text-sm text-gray-400 hover:text-white transition flex items-center gap-2">
+            <span>&larr;</span> Zpět na úvod
+        </a>
     </header>
 
-    <main style="max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem; line-height: 1.7; color: var(--fg, #e0e0e0);">
+    <main class="max-w-3xl mx-auto px-6 py-12 md:py-16 flex-grow w-full">
+        <h1 class="text-3xl md:text-4xl font-extrabold mb-8 text-white tracking-tight">Zásady ochrany osobních údajů (GDPR)</h1>
         
-        <h1 style="font-size: 2.2rem; font-weight: 800; color: #fff; margin-bottom: 2rem; letter-spacing: -0.02em;">
-            Zásady ochrany osobních údajů
-        </h1>
-        
-        <div style="display: flex; flex-direction: column; gap: 2rem; font-size: 0.95rem;">
+        <div class="space-y-8 text-sm md:text-base text-gray-300 leading-relaxed">
             
-            <section>
-                <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; border-left: 3px solid var(--primary, #00ff66); padding-left: 0.75rem;">
-                    1. Základní ustanovení
-                </h2>
-                <p style="margin-bottom: 0.5rem;">
-                    Správcem osobních údajů podle čl. 4 bodu 7 nařízení Evropského parlamentu a Rady (EU) 2016/679 o ochraně fyzických osob v souvislosti se zpracováním osobních údajů a o volném pohybu těchto údajů (GDPR) je <strong>Tomáš Odehnal</strong>, sídlem Šlapanice, Česká republika (dále jen „správce“).
-                </p>
-                <p>
-                    <strong>Kontaktní údaje správce:</strong><br>
-                    E-mail: <a href="mailto:info@tomdev.cz" style="color: #fff;">info@tomdev.cz</a><br>
-                    Web: tomdev.cz
-                </p>
+            <section class="space-y-3">
+                <h2 class="text-xl font-bold text-white border-l-2 border-green-400 pl-3">1. Základní ustanovení</h2>
+                <p>Správcem osobních údajů podle čl. 4 bodu 7 nařízení Evropského parlamentu a Rady (EU) 2016/679 o ochraně fyzických osob v souvislosti se zpracováním osobních údajů a o volném pohybu těchto údajů (GDPR) je <strong>Tomáš Odehnal</strong>, sídlo: Kurzova 2222/16, 155 00 Praha, IČO: 24943975, zapsaný v živnostenském rejstříku (dále jen „správce“).</p>
+                <p><strong>Kontaktní údaje správce:</strong><br>
+                E-mail: info@tomdev.cz<br>
+                Web: www.tomdev.cz</p>
             </section>
 
-            <section>
-                <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; border-left: 3px solid var(--primary, #00ff66); padding-left: 0.75rem;">
-                    2. Zdroje a kategorie zpracovávaných osobních údajů
-                </h2>
-                <p style="margin-bottom: 0.5rem;">
-                    Správce zpracovává osobní údaje, které jste mu poskytli, nebo osobní údaje, které správce získal na základě vyřízení vaší objednávky či poptávky prostřednictvím webových stránek.
-                </p>
-                <p>
-                    Zpracovávány jsou zejména vaše identifikační a kontaktní údaje nezbytné pro vyřízení komunikace (jméno, příjmení, e-mailová adresa, telefonní číslo, případně text zprávy).
-                </p>
+            <section class="space-y-3">
+                <h2 class="text-xl font-bold text-white border-l-2 border-green-400 pl-3">2. Zdroje a kategorie zpracovávaných osobních údajů</h2>
+                <p>Správce zpracovává osobní údaje, které jste mu poskytli, nebo osobní údaje, které správce získal na základě vyřízení vaší objednávky či poptávky prostřednictvím webových stránek.</p>
+                <p>Zpracovávány jsou zejména vaše identifikační a kontaktní údaje nezbytné pro vyřízení komunikace (jméno, příjmení, e-mailová adresa, telefonní číslo, případně text zprávy).</p>
             </section>
 
-            <section>
-                <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; border-left: 3px solid var(--primary, #00ff66); padding-left: 0.75rem;">
-                    3. Zákonný důvod a účel zpracování osobních údajů
-                </h2>
-                <p style="margin-bottom: 0.5rem;">Zákonným důvodem pro zpracování osobních údajů je:</p>
-                <ul style="padding-left: 1.25rem; margin-bottom: 0.5rem; color: #aaa;">
-                    <li style="margin-bottom: 0.25rem;">Splnění smlouvy či provedení opatření před uzavřením smlouvy na vaši žádost dle čl. 6 odst. 1 písm. b) GDPR (vyřízení poptávky IT služeb, spolupráce apod.),</li>
-                    <li>Oprávněný zájem správce na přímém marketingu či zajištění technického provozu webu.</li>
+            <section class="space-y-3">
+                <h2 class="text-xl font-bold text-white border-l-2 border-green-400 pl-3">3. Zákonný důvod a účel zpracování osobních údajů</h2>
+                <p>Zákonným důvodem pro zpracování osobních údajů je:</p>
+                <ul class="list-disc list-inside space-y-1 text-gray-400 pl-2">
+                    <li>Splnění smlouvy či provedení opatření před uzavřením smlouvy na vaši žádost dle čl. 6 odst. 1 písm. b) GDPR (vyřízení poptávky IT služeb, spolupráce apod.),</li>
+                    <li>Oprávněný zájem správce na zajištění technického provozu a bezpečnosti webu.</li>
                 </ul>
                 <p>Účelem zpracování osobních údajů je vyřízení vašeho požadavku, poptávky nebo dotazu odeslaného přes kontaktní formulář.</p>
             </section>
 
-            <section>
-                <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; border-left: 3px solid var(--primary, #00ff66); padding-left: 0.75rem;">
-                    4. Doba uložení údajů
-                </h2>
-                <p>
-                    Správce uchovává osobní údaje po dobu nezbytnou k výkonu práv a povinností vyplývajících ze smluvního vztahu mezi vámi a správcem (po dobu trvání vzájemné komunikace a řešení požadavku), nejdéle však po dobu 3 let od posledního kontaktu, pokud jiný právní předpis nestanoví delší dobu uchování.
-                </p>
+            <section class="space-y-3">
+                <h2 class="text-xl font-bold text-white border-l-2 border-green-400 pl-3">4. Doba uložení údajů</h2>
+                <p>Správce uchovává osobní údaje po dobu nezbytnou k výkonu práv a povinností vyplývajících ze smluvního vztahu mezi vámi a správcem (po dobu trvání vzájemné komunikace a řešení požadavku), nejdéle však po dobu 3 let od posledního kontaktu, pokud jiný právní předpis nestanoví delší dobu uchování.</p>
             </section>
 
-            <section>
-                <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; border-left: 3px solid var(--primary, #00ff66); padding-left: 0.75rem;">
-                    5. Práva subjektu údajů
-                </h2>
-                <p style="margin-bottom: 0.5rem;">Za podmínek stanovených v GDPR máte právo:</p>
-                <ul style="padding-left: 1.25rem; margin-bottom: 0.5rem; color: #aaa;">
+            <section class="space-y-3">
+                <h2 class="text-xl font-bold text-white border-l-2 border-green-400 pl-3">5. Práva subjektu údajů</h2>
+                <p>Za podmínek stanovených v GDPR máte právo:</p>
+                <ul class="list-disc list-inside space-y-1 text-gray-400 pl-2">
                     <li>na přístup ke svým osobním údajům dle čl. 15 GDPR,</li>
                     <li>na opravu osobních údajů dle čl. 16 GDPR, popřípadě omezení zpracování dle čl. 18 GDPR,</li>
                     <li>na výmaz osobních údajů dle čl. 17 GDPR,</li>
@@ -85,16 +68,10 @@
                 <p>Svá práva můžete uplatnit e-mailem na adrese správce. Pokud se domníváte, že byla porušena vaše práva na ochranu osobních údajů, máte právo podat stížnost u Úřadu pro ochranu osobních údajů (www.uoou.cz).</p>
             </section>
 
-            <section>
-                <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; border-left: 3px solid var(--primary, #00ff66); padding-left: 0.75rem;">
-                    6. Závěrečná ustanovení
-                </h2>
-                <p style="margin-bottom: 0.5rem;">
-                    Odesláním formuláře z internetových stránek potvrzujete, že jste se seznámili s podmínkami ochrany osobních údajů a že jste jimi v plném rozsahu srozuměni.
-                </p>
-                <p style="color: #888; font-size: 0.85rem; margin-top: 1rem;">
-                    Tyto podmínky nabývají účinnosti dnem 1. 10. 2026.
-                </p>
+            <section class="space-y-3">
+                <h2 class="text-xl font-bold text-white border-l-2 border-green-400 pl-3">6. Závěrečná ustanovení</h2>
+                <p>Odesláním formuláře z internetových stránek potvrzujete, že jste se seznámili s podmínkami ochrany osobních údajů.</p>
+                <p class="text-sm text-gray-400 pt-2">Tyto podmínky nabývají účinnosti dnem 1. 10. 2026.</p>
             </section>
 
         </div>
